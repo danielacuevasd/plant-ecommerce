@@ -1,0 +1,44 @@
+# Dependencias
+node_modules/
+package-lock.json
+yarn.lock
+
+# Variables de entorno y credenciales
+.env
+.env.local
+.env.development
+.env.production
+*.pem
+config/secrets.js
+
+# Build / dist
+dist/
+build/
+.next/
+.parcel-cache/
+
+# Backend / base de datos
+*.sqlite
+*.sqlite3
+*.db
+/uploads/
+logs/
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+
+# Testing (Jasmine/Karma)
+coverage/
+.nyc_output/
+
+# Archivos temporales
+*.tmp
+*.bak
