@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Florae</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Florae" class="logo-img">
+                <span>Florae</span>
+            </a>
+        </div>
+
+        <nav class="nav-principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html" aria-current="page">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-usuario">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html">Registrarse</a>
+            <a href="carrito.html" class="carrito-link">
+                Carrito (<span id="contador-carrito">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="encabezado-pagina">
+            <h1>Productos</h1>
+            <p id="contador-productos">Cargando productos...</p>
+        </section>
+
+        <section class="listado-productos">
+            <div class="grid-productos" id="lista-productos">
+                <!-- Contenido generado dinámicamente por js/productos.js a partir de un arreglo de objetos -->
+                <article class="tarjeta-producto">
+                    <a href="detalle-producto.html?id=1">
+                        <img src="img/producto-placeholder.jpg" alt="Nombre del producto">
+                        <h2>Nombre del producto</h2>
+                    </a>
+                    <p class="precio">$0.000</p>
+                    <button class="btn-secundario" type="button" data-id="1">Añadir al carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-columna">
+            <h3>Florae</h3>
+            <p>Tu vivero online de confianza.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h4>Categorías</h4>
+            <ul>
+                <li><a href="productos.html">Plantas de interior</a></li>
+                <li><a href="productos.html">Plantas de exterior</a></li>
+                <li><a href="productos.html">Macetas y accesorios</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>contacto@florae.cl</p>
+            <p>Santiago, Chile</p>
+        </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>
