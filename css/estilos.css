@@ -416,6 +416,73 @@ textarea:focus-visible {
     gap: 1.5rem;
 }
 
+.item-carrito {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto auto;
+    align-items: center;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.item-carrito img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--radio-base);
+}
+
+.item-carrito__info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.item-carrito__info .precio {
+    font-size: 0.95rem;
+}
+
+.item-carrito__cantidad {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-cantidad {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-blanco);
+    border-radius: 50%;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.btn-cantidad:hover {
+    border-color: var(--color-verde-oscuro);
+}
+
+.item-carrito__subtotal {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--color-verde-oscuro);
+    white-space: nowrap;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: var(--color-error);
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.btn-eliminar:hover {
+    color: #8f3129;
+}
+
 .carrito-resumen {
     background-color: var(--color-blanco);
     border: 1px solid var(--color-borde);
@@ -552,4 +619,25 @@ textarea:focus-visible {
     .campo-formulario-doble {
         grid-template-columns: 1fr;
     }
+
+    .item-carrito {
+        grid-template-columns: 60px 1fr;
+        grid-template-areas:
+            "imagen info"
+            "imagen cantidad"
+            "imagen subtotal"
+            "imagen eliminar";
+        row-gap: 0.5rem;
+    }
+
+    .item-carrito img {
+        grid-area: imagen;
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-carrito__info { grid-area: info; }
+    .item-carrito__cantidad { grid-area: cantidad; }
+    .item-carrito__subtotal { grid-area: subtotal; }
+    .btn-eliminar { grid-area: eliminar; justify-self: start; }
 }
