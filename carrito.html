@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi carrito | Florae</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Florae" class="logo-img">
+                <span>Florae</span>
+            </a>
+        </div>
+
+        <nav class="nav-principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-usuario">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html">Registrarse</a>
+            <a href="carrito.html" class="carrito-link" aria-current="page">
+                Carrito (<span id="contador-carrito">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="encabezado-pagina">
+            <h1>Mi carrito de compras</h1>
+        </section>
+
+        <section class="carrito-contenido">
+            <div class="carrito-items" id="carrito-items">
+                <!-- Generado dinámicamente por js/carrito.js a partir de localStorage -->
+                <p id="carrito-vacio" class="texto-secundario">Tu carrito está vacío.</p>
+            </div>
+
+            <aside class="carrito-resumen">
+                <h2>Resumen</h2>
+
+                <div class="resumen-linea">
+                    <span>Subtotal</span>
+                    <span id="carrito-subtotal">$0</span>
+                </div>
+
+                <div class="resumen-linea resumen-linea--total">
+                    <span>Total</span>
+                    <span id="carrito-total">$0</span>
+                </div>
+
+                <form id="form-cupon" class="form-cupon">
+                    <label for="cupon">Cupón de descuento</label>
+                    <div class="form-cupon__grupo">
+                        <input type="text" id="cupon" name="cupon" placeholder="Ingresa tu código">
+                        <button type="submit" class="btn-secundario">Aplicar</button>
+                    </div>
+                    <small class="mensaje-error" id="error-cupon"></small>
+                </form>
+
+                <button type="button" class="btn-principal" id="btn-pagar">Pagar</button>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-columna">
+            <h3>Florae</h3>
+            <p>Tu vivero online de confianza.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h4>Categorías</h4>
+            <ul>
+                <li><a href="productos.html">Plantas de interior</a></li>
+                <li><a href="productos.html">Plantas de exterior</a></li>
+                <li><a href="productos.html">Macetas y accesorios</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>contacto@florae.cl</p>
+            <p>Santiago, Chile</p>
+        </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

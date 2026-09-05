@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Florae</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Florae" class="logo-img">
+                <span>Florae</span>
+            </a>
+        </div>
+
+        <nav class="nav-principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-usuario">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html">Registrarse</a>
+            <a href="carrito.html" class="carrito-link">
+                Carrito (<span id="contador-carrito">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion-formulario">
+            <div class="login-marca">
+                <img src="img/logo.png" alt="Logo Florae" class="login-marca__logo">
+                <h2>Florae</h2>
+            </div>
+
+            <form id="form-contacto" class="tarjeta-formulario" novalidate>
+                <h1>Formulario de contacto</h1>
+
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required maxlength="100" autocomplete="name">
+                    <small class="mensaje-error" id="error-nombre"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" maxlength="100" autocomplete="email">
+                    <small class="mensaje-error" id="error-correo">Solo se aceptan correos @duoc.cl, @profesor.duoc.cl o @gmail.com</small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="comentario">Comentario</label>
+                    <textarea id="comentario" name="comentario" rows="5" required maxlength="500"></textarea>
+                    <small class="mensaje-error" id="error-comentario"></small>
+                    <small class="contador-caracteres" id="contador-comentario">0 / 500</small>
+                </div>
+
+                <button type="submit" class="btn-principal">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-columna">
+            <h3>Florae</h3>
+            <p>Tu vivero online de confianza.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h4>Categorías</h4>
+            <ul>
+                <li><a href="productos.html">Plantas de interior</a></li>
+                <li><a href="productos.html">Plantas de exterior</a></li>
+                <li><a href="productos.html">Macetas y accesorios</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>contacto@florae.cl</p>
+            <p>Santiago, Chile</p>
+        </div>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+</html>
