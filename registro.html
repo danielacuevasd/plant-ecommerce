@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario | Florae</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Florae" class="logo-img">
+                <span>Florae</span>
+            </a>
+        </div>
+
+        <nav class="nav-principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-usuario">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="registro.html" aria-current="page">Registrarse</a>
+            <a href="carrito.html" class="carrito-link">
+                Carrito (<span id="contador-carrito">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion-formulario">
+            <form id="form-registro" class="tarjeta-formulario" novalidate>
+                <h1>Registro de usuario</h1>
+
+                <div class="campo-formulario">
+                    <label for="run">RUN</label>
+                    <input type="text" id="run" name="run" placeholder="Sin puntos ni guión, ej: 19011022K" required minlength="7" maxlength="9">
+                    <small class="mensaje-error" id="error-run"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required maxlength="50">
+                    <small class="mensaje-error" id="error-nombre"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" required maxlength="100">
+                    <small class="mensaje-error" id="error-apellidos"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" required maxlength="100" autocomplete="email">
+                    <small class="mensaje-error" id="error-correo">Solo se aceptan correos @duoc.cl, @profesor.duoc.cl o @gmail.com</small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" required minlength="4" maxlength="10" autocomplete="new-password">
+                    <small class="mensaje-error" id="error-contrasena"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="confirmar-contrasena">Confirmar contraseña</label>
+                    <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" required minlength="4" maxlength="10" autocomplete="new-password">
+                    <small class="mensaje-error" id="error-confirmar-contrasena"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono (opcional)</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                </div>
+
+                <div class="campo-formulario-doble">
+                    <div class="campo-formulario">
+                        <label for="region">Región</label>
+                        <select id="region" name="region" required>
+                            <option value="">-- Seleccione la región --</option>
+                            <!-- Opciones cargadas dinámicamente por js/validaciones.js desde un arreglo de regiones -->
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="comuna">Comuna</label>
+                        <select id="comuna" name="comuna" required>
+                            <option value="">-- Seleccione la comuna --</option>
+                            <!-- Opciones cargadas dinámicamente según la región seleccionada -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" required maxlength="300">
+                    <small class="mensaje-error" id="error-direccion"></small>
+                </div>
+
+                <button type="submit" class="btn-principal">Registrar</button>
+
+                <p class="texto-secundario">
+                    ¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-columna">
+            <h3>Florae</h3>
+            <p>Tu vivero online de confianza.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h4>Categorías</h4>
+            <ul>
+                <li><a href="productos.html">Plantas de interior</a></li>
+                <li><a href="productos.html">Plantas de exterior</a></li>
+                <li><a href="productos.html">Macetas y accesorios</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>contacto@florae.cl</p>
+            <p>Santiago, Chile</p>
+        </div>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>
