@@ -17,7 +17,7 @@ const productos = [
         stockCritico: 3,
         descripcionCorta: "Planta de interior de hojas grandes y recortadas.",
         descripcion: "La Monstera Deliciosa es una de las plantas de interior más populares por sus hojas grandes con recortes característicos. Prefiere luz indirecta y riego moderado, ideal para espacios luminosos sin sol directo.",
-        imagen: "img/producto-placeholder.jpg"
+        imagen: "img/monstera.jpg"
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const productos = [
         stockCritico: 5,
         descripcionCorta: "Planta colgante de fácil cuidado, ideal para principiantes.",
         descripcion: "El Potus es una planta trepadora o colgante muy resistente, perfecta para quienes recién comienzan en el mundo de las plantas. Tolera baja luminosidad y riego espaciado.",
-        imagen: "img/producto-placeholder.jpg"
+        imagen: "img/potus.jpg"
     },
     {
         id: 3,
@@ -39,7 +39,7 @@ const productos = [
         stockCritico: 3,
         descripcionCorta: "Hojas redondeadas con líneas plateadas, apta para mascotas.",
         descripcion: "La Calathea Orbifolia destaca por sus hojas redondeadas con vetas plateadas. Necesita humedad ambiental y luz indirecta. Es una planta no tóxica, apta para hogares con mascotas.",
-        imagen: "img/producto-placeholder.jpg"
+        imagen: "img/calathea.jpg"
     },
     {
         id: 4,
@@ -50,7 +50,7 @@ const productos = [
         stockCritico: 4,
         descripcionCorta: "Arbusto aromático de exterior, ideal para jardines soleados.",
         descripcion: "La lavanda es un arbusto perenne muy aromático, perfecto para jardines exteriores con buena exposición solar. Atrae polinizadores y requiere riego escaso una vez establecida.",
-        imagen: "img/producto-placeholder.jpg"
+        imagen: "img/lavanda.jpg"
     },
     {
         id: 5,
@@ -61,7 +61,7 @@ const productos = [
         stockCritico: 8,
         descripcionCorta: "Suculenta de bajo mantenimiento, ideal para principiantes.",
         descripcion: "La Echeveria es una suculenta de roseta compacta, ideal para espacios con mucha luz. Requiere riego muy espaciado y es perfecta para quienes buscan plantas de bajo mantenimiento.",
-        imagen: "img/producto-placeholder.jpg"
+        imagen: "img/echeveria.jpg"
     },
     {
         id: 6,
@@ -72,7 +72,7 @@ const productos = [
         stockCritico: 5,
         descripcionCorta: "Maceta de cerámica con plato incluido, 20 cm de diámetro.",
         descripcion: "Maceta de cerámica esmaltada color blanco, con orificio de drenaje y plato incluido. Diámetro de 20 cm, ideal para plantas de interior medianas.",
-        imagen: "img/producto-placeholder.jpg"
+        imagen: "img/maceta-blanca.jpg"
     },
     {
         id: 7,
@@ -83,7 +83,7 @@ const productos = [
         stockCritico: 10,
         descripcionCorta: "Mezcla de tierra apta para la mayoría de las plantas de interior.",
         descripcion: "Sustrato universal balanceado, apto para el trasplante de la mayoría de las plantas de interior y exterior. Presentación de 5 litros.",
-        imagen: "img/producto-placeholder.jpg"
+        imagen: "img/sustrato.jpg"
     },
     {
         id: 8,
@@ -94,7 +94,7 @@ const productos = [
         stockCritico: 2,
         descripcionCorta: "Set de 3 piezas: pala, rastrillo y tijera de podar.",
         descripcion: "Set de herramientas básicas de jardinería en acero inoxidable con mango ergonómico: pala de trasplante, rastrillo de mano y tijera de podar.",
-        imagen: "img/producto-placeholder.jpg"
+        imagen: "img/herramientas.jpg"
     }
 ];
 
