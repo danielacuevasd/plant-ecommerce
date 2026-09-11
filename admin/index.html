@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel administrador | Florae</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar__logo">
+                <img src="../img/logo.png" alt="Logo Florae" class="logo-img">
+                <span>Florae</span>
+            </div>
+
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="usuarios.html">Usuarios</a></li>
+                </ul>
+            </nav>
+
+            <div class="admin-sidebar__pie">
+                <a href="../index.html">Volver a la tienda</a>
+            </div>
+        </aside>
+
+        <main class="admin-contenido">
+            <header class="admin-header">
+                <h1>¡Hola, Administrador!</h1>
+            </header>
+
+            <section class="admin-resumen">
+                <article class="admin-tarjeta">
+                    <h2 id="total-productos">0</h2>
+                    <p>Productos registrados</p>
+                </article>
+
+                <article class="admin-tarjeta">
+                    <h2 id="total-usuarios">0</h2>
+                    <p>Usuarios registrados</p>
+                </article>
+
+                <article class="admin-tarjeta admin-tarjeta--alerta">
+                    <h2 id="total-stock-critico">0</h2>
+                    <p>Productos con stock crítico</p>
+                </article>
+            </section>
+
+            <section class="admin-accesos">
+                <h2>Accesos rápidos</h2>
+                <div class="admin-accesos__grid">
+                    <a href="nuevo-producto.html" class="btn-principal">Nuevo producto</a>
+                    <a href="nuevo-usuario.html" class="btn-secundario">Nuevo usuario</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

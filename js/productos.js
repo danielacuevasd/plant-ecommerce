@@ -10,6 +10,7 @@
 const productos = [
     {
         id: 1,
+        codigo: "PL-001",
         nombre: "Monstera Deliciosa",
         categoria: "interior",
         precio: 18990,
@@ -21,6 +22,7 @@ const productos = [
     },
     {
         id: 2,
+        codigo: "PL-002",
         nombre: "Potus Verde",
         categoria: "interior",
         precio: 8990,
@@ -32,6 +34,7 @@ const productos = [
     },
     {
         id: 3,
+        codigo: "PL-003",
         nombre: "Calathea Orbifolia",
         categoria: "interior",
         precio: 14990,
@@ -43,6 +46,7 @@ const productos = [
     },
     {
         id: 4,
+        codigo: "PL-004",
         nombre: "Lavanda",
         categoria: "exterior",
         precio: 6990,
@@ -54,6 +58,7 @@ const productos = [
     },
     {
         id: 5,
+        codigo: "PL-005",
         nombre: "Suculenta Echeveria",
         categoria: "exterior",
         precio: 4990,
@@ -65,6 +70,7 @@ const productos = [
     },
     {
         id: 6,
+        codigo: "MC-001",
         nombre: "Maceta Cerámica Blanca",
         categoria: "macetas",
         precio: 9990,
@@ -76,6 +82,7 @@ const productos = [
     },
     {
         id: 7,
+        codigo: "SU-001",
         nombre: "Sustrato Universal 5L",
         categoria: "sustratos",
         precio: 5990,
@@ -87,6 +94,7 @@ const productos = [
     },
     {
         id: 8,
+        codigo: "HT-001",
         nombre: "Set de Herramientas de Jardín",
         categoria: "herramientas",
         precio: 12990,
