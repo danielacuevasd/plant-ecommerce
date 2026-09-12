@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo-pagina">Nuevo producto | Panel administrador Florae</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar__logo">
+                <img src="../img/logo.png" alt="Logo Florae" class="logo-img">
+                <span>Florae</span>
+            </div>
+
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" aria-current="page">Productos</a></li>
+                    <li><a href="usuarios.html">Usuarios</a></li>
+                </ul>
+            </nav>
+
+            <div class="admin-sidebar__pie">
+                <a href="../index.html">Volver a la tienda</a>
+            </div>
+        </aside>
+
+        <main class="admin-contenido">
+            <h1 id="encabezado-formulario">Nuevo producto</h1>
+
+            <form id="form-producto" class="tarjeta-formulario" style="max-width: 560px; margin-top: 1.5rem;" novalidate>
+
+                <div class="campo-formulario">
+                    <label for="codigo">Código producto</label>
+                    <input type="text" id="codigo" name="codigo" required minlength="3" placeholder="Ej: PL-009">
+                    <small class="mensaje-error" id="error-codigo"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required maxlength="100">
+                    <small class="mensaje-error" id="error-nombre"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="descripcion">Descripción (opcional)</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" maxlength="500"></textarea>
+                    <small class="mensaje-error" id="error-descripcion"></small>
+                </div>
+
+                <div class="campo-formulario-doble">
+                    <div class="campo-formulario">
+                        <label for="precio">Precio</label>
+                        <input type="number" id="precio" name="precio" required min="0" step="0.01">
+                        <small class="mensaje-error" id="error-precio"></small>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">-- Seleccione categoría --</option>
+                            <option value="interior">Plantas de interior</option>
+                            <option value="exterior">Plantas de exterior</option>
+                            <option value="macetas">Macetas</option>
+                            <option value="sustratos">Sustratos y tierra</option>
+                            <option value="herramientas">Herramientas</option>
+                        </select>
+                        <small class="mensaje-error" id="error-categoria"></small>
+                    </div>
+                </div>
+
+                <div class="campo-formulario-doble">
+                    <div class="campo-formulario">
+                        <label for="stock">Stock</label>
+                        <input type="number" id="stock" name="stock" required min="0" step="1">
+                        <small class="mensaje-error" id="error-stock"></small>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="stock-critico">Stock crítico (opcional)</label>
+                        <input type="number" id="stock-critico" name="stock-critico" min="0" step="1">
+                        <small class="mensaje-error" id="error-stock-critico"></small>
+                    </div>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="imagen">Imagen (opcional)</label>
+                    <input type="text" id="imagen" name="imagen" placeholder="img/nombre-archivo.jpg">
+                    <small class="mensaje-error" id="error-imagen"></small>
+                </div>
+
+                <button type="submit" class="btn-principal" id="btn-guardar-producto">Guardar producto</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/validaciones.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

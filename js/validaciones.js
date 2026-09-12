@@ -13,7 +13,7 @@ const dominiosPermitidos = ["duoc.cl", "profesor.duoc.cl", "gmail.com"];
 const regiones = [
     {
         nombre: "Región Metropolitana de Santiago",
-        comunas: ["Santiago", "Providencia", "Las Condes", "Maipú", "Puente Alto"]
+        comunas: ["Santiago", "Providencia", "Las Condes", "Maipú", "Puente Alto", "Ñuñoa"]
     },
     {
         nombre: "Región de Valparaíso",
@@ -90,7 +90,6 @@ function validarRun(run) {
 
 
 // REGIÓN / COMUNA (usado en registro.html)
-
 function poblarRegiones() {
     const selectRegion = document.getElementById("region");
     if (!selectRegion) return;
@@ -126,7 +125,6 @@ function poblarComunas(indiceRegion) {
 
 
 // FORMULARIO DE REGISTRO
-
 function inicializarFormularioRegistro() {
     const form = document.getElementById("form-registro");
     if (!form) return;
@@ -201,9 +199,7 @@ function inicializarFormularioRegistro() {
     });
 }
 
-
 // FORMULARIO DE LOGIN
-
 function inicializarFormularioLogin() {
     const form = document.getElementById("form-login");
     if (!form) return;
@@ -234,9 +230,7 @@ function inicializarFormularioLogin() {
     });
 }
 
-
 // FORMULARIO DE CONTACTO
-
 function inicializarFormularioContacto() {
     const form = document.getElementById("form-contacto");
     if (!form) return;
@@ -283,7 +277,6 @@ function inicializarFormularioContacto() {
         }
     });
 }
-
 
 // PUNTO DE ENTRADA
 
