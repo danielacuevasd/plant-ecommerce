@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Panel administrador Florae</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar__logo">
+                <img src="../img/logo.png" alt="Logo Florae" class="logo-img">
+                <span>Florae</span>
+            </div>
+
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" aria-current="page">Productos</a></li>
+                    <li><a href="usuarios.html">Usuarios</a></li>
+                </ul>
+            </nav>
+
+            <div class="admin-sidebar__pie">
+                <a href="../index.html">Volver a la tienda</a>
+            </div>
+        </aside>
+
+        <main class="admin-contenido">
+            <div class="admin-encabezado-lista">
+                <h1>Productos</h1>
+                <a href="nuevo-producto.html" class="btn-principal">Nuevo producto</a>
+            </div>
+
+            <div class="admin-tabla-contenedor">
+                <table class="admin-tabla">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-productos-body">
+                        <!-- Filas generadas dinámicamente por js/admin.js a partir del arreglo "productos" -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
