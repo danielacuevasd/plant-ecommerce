@@ -1,8 +1,12 @@
 # Florae — Tienda online de plantas y jardinería
 
-Proyecto semestral de la asignatura **DSY1104 — Desarrollo Fullstack II**. Consiste en el desarrollo de una tienda online para un vivero, construida de forma incremental a lo largo de tres evaluaciones parciales.
+Proyecto semestral de la asignatura **DSY1104 — Desarrollo Fullstack II** (Duoc UC). Consiste en el desarrollo de una tienda online para un vivero, construida de forma incremental a lo largo de tres evaluaciones parciales.
 
-## Evaluación Parcial 1 (actual)
+## Estado actual: migración a React (EP2)
+
+El proyecto se encuentra migrando desde HTML/CSS/JS puro (EP1) hacia **React + Vite**. La versión original de EP1 se conserva íntegra en la carpeta [`legacy/`](./legacy) como referencia y respaldo.
+
+## Evaluación Parcial 1 (completada)
 
 Frontend estático desarrollado con **HTML5, CSS3 y JavaScript** (sin frameworks), enfocado en:
 
@@ -12,44 +16,61 @@ Frontend estático desarrollado con **HTML5, CSS3 y JavaScript** (sin frameworks
 - Carrito de compras persistido con `localStorage`.
 - Simulación de un mantenedor de productos y usuarios (sin backend).
 
+> El detalle completo de EP1 está documentado dentro de [`legacy/`](./legacy).
+
+## Evaluación Parcial 2 (en curso)
+
+Migración del frontend a **React** utilizando **Vite** como herramienta de build, manteniendo el mismo diseño y funcionalidad de EP1, ahora basado en componentes.
+
 ## Estructura del proyecto
 
 ```
 plant-ecommerce/
-├── admin/
-│   ├── index.html
-│   ├── productos.html
-│   ├── nuevo-producto.html
-│   ├── usuarios.html
-│   └── nuevo-usuario.html
-├── css/
-│   ├── estilos.css       # Estilos de la vista tienda
-│   └── admin.css         # Estilos del panel administrador
-├── js/
-│   ├── productos.js       # Datos y renderizado de productos
-│   ├── carrito.js         # Lógica del carrito (localStorage)
-│   ├── validaciones.js    # Validaciones de formularios (tienda)
-│   └── admin.js           # Lógica del panel administrador
-├── img/
+├── legacy/                # Proyecto completo de EP1 (HTML, CSS y JS puro)
+│   ├── admin/
+│   ├── css/
+│   ├── js/
+│   ├── img/
+│   └── *.html
+├── src/                   # Proyecto React (EP2 en adelante)
+│   ├── assets/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   └── Footer.jsx
+│   ├── pages/
+│   │   ├── Inicio.jsx
+│   │   ├── Catalogo.jsx
+│   │   ├── DetalleProducto.jsx
+│   │   ├── Registro.jsx
+│   │   ├── Login.jsx
+│   │   ├── Nosotros.jsx
+│   │   ├── Contacto.jsx
+│   │   └── Carrito.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── public/
 ├── docs/
 │   └── ERS.md             # Especificación de requisitos del software
-├── index.html
-├── productos.html
-├── detalle-producto.html
-├── registro.html
-├── login.html
-├── nosotros.html
-├── contacto.html
-├── carrito.html
+├── index.html             # Punto de entrada de Vite
+├── package.json
+├── vite.config.js
 └── README.md
 ```
 
 ## Cómo ejecutar el proyecto
 
-Al ser un proyecto de frontend estático, no requiere instalación de dependencias:
+### Versión React (actual)
 
-1. Clona el repositorio.
-2. Abre `index.html` en tu navegador (o usa una extensión como "Live Server" en VS Code).
+```bash
+npm install
+npm run dev
+```
+
+### Versión EP1 (legacy, sin dependencias)
+
+Abre `legacy/index.html` directamente en el navegador, o usa una extensión como "Live Server" en VS Code.
 
 ## Roles del sistema
 
@@ -71,10 +92,16 @@ El proyecto se desarrolla bajo la estrategia `main` + `develop` + `feature/*`:
 
 - `main`: versión estable.
 - `develop`: rama de integración.
-- `feature/*`: una rama por funcionalidad (ej. `feature/vistas-tienda`, `feature/vista-admin`).
+- `feature/*`: una rama por funcionalidad (ej. `feature/vistas-tienda`, `feature/vista-admin`, `feature/migracion-react`).
 
 ## Próximas etapas
 
+- Completar la migración de todas las vistas a componentes React.
+- Incorporar React Router para la navegación entre páginas.
 - Integración de pruebas unitarias con Jasmine y Karma.
-- Posible incorporación de React y Bootstrap.
-- Integración con API REST y base de datos.
+- Integración con API REST y base de datos (EP3).
+
+---
+
+**Autora:** Daniela Cuevas
+**Asignatura:** DSY1104 — Desarrollo Fullstack II

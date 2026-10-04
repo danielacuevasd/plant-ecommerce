@@ -13,9 +13,11 @@ config/secrets.js
 
 # Build / dist
 dist/
+dist-ssr/
 build/
 .next/
 .parcel-cache/
+*.local
 
 # Backend / base de datos
 *.sqlite
